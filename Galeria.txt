@@ -1,0 +1,49 @@
+h1 con clase text-center desplay-4 my-4
+
+dic con la clase card-columns
+
+agragamos la primera tarjeta con una imagen 
+
+a la etiqueta imagen le colocamos la clase card-img-top para que la imagen 
+sea mas pequeña
+
+envolvemos la imagen en un ancla para hacerla cliqueable
+
+al ancla le colocamos las clases del modal de bootstrap:
+data-toggle="modal" 
+data-target="#exampleModal"
+
+copiamos todas las lineas del modal y la pegamos fueara del div que contiene la clase card
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+eliminamos modal-footer, modal-body, modal-conten y el boton de cerrar
+
+Ahora colocamos la etiqueta imagen dentro de modal-dialog
+Div del modal dialog le agragamos las siguientes clases 
+modal-lg agranda la imagen
+modal-dialog-center  centra la imagen en la pantalla
+
+img con las siguientes clases 
+class="img-fluid- rounded" hace la imagen responsive y le coloca bordes redondeados

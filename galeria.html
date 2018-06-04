@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Curso de Bootstrap 4 Galeria de Imagenes" />
+    <meta name="keyworkds" content="HTML,CSS,JavaScript,DOM,AJAX,Json,PHP,MySql,Laravel" /> 
+    <meta name="author" content="Carlos Oliveros" />
+
+    <title>Galería de imagenes</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Estilos personalizados para esta plantilla -->
+    <link href="css/estilo.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+
+        <!-- Logo de la empresa o nombre -->
+        <a class="navbar-brand" href="#">
+          <img src="img/logo-tour.jpg" width="80" height="80" alt="Logo_tour" class="d-inline-block align-top"> Agencia de Viajes "LIVE TOUR"
+        </a>
+        
+        <!-- fin logo de la empresa -->
+
+        <!-- Menú a la derecha -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio
+                <!-- 
+                  Cuando se diseña un sitio web accesible, es común añadir ayudas en forma de texto que no se ve por pantalla, pero sí que se lee en los lectores que utilizan para navegar las personas con discapacidad. Bootstrap define la clase .sr-only para marcar un contenido como oculto y que sólo esté disponible para los lectores ("screen readers" en inglés, de ahí el nombre de la clase CSS). 
+                -->
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promociones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contactos</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Fin del menu a la derecha -->
+      </div>
+    </nav>
+
+    <!-- Carousel -->
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Diapositiva 1: establece la imagen de fondo para esta diapositiva en la línea siguiente -->
+          <div class="carousel-item active" style="background-image: url('img/t1.JPG')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Lyon</h3>
+              <p>Tour 1: Paris - Lyon - Toulouse​ (7 dias).</p>
+            </div>
+          </div>
+          <!-- Diapositiva dos: establece la imagen de fondo para esta diapositiva en la línea siguiente -->
+          <div class="carousel-item" style="background-image: url('img/t2.JPG')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Madrid</h3>
+              <p>Tour 2: Madrid - Granada - Sevilla - Barcelona (10 dias)​.</p>
+            </div>
+          </div>
+          <!-- Diapositiva tres: establece la imagen de fondo para esta diapositiva en la línea siguiente -->
+          <div class="carousel-item" style="background-image: url('img/t3.JPG')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Chicago</h3>
+              <p>Tour 3: Chicago - New York - Boston (15 dias)​.</p>
+            </div>
+          </div>
+           <!-- Diapositiva cuatro: establece la imagen de fondo para esta diapositiva en la línea siguiente -->
+          <div class="carousel-item" style="background-image: url('img/t4.JPG')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Amsterdam</h3>
+              <p>Tour 4: Amsterdam - Berlin - Praga (15 dias)​.</p>
+            </div>
+          </div>
+        </div>  
+      </div>
+
+        <!-- controles  Next y Prev-->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+    </header>
+    <!-- Fin del carousel -->
+
+    <!-- contenido de la pagina -->
+    <!-- Tour1 -->    
+    <section class="py-5">
+      <div class="container">
+          <h1 class="text-center display-4">Tour 1: Paris - Lyon - Toulouse​ </h1>
+        <!-- Colocamos un identificador para las tarjetas (card) llado galeria -->
+        <div class="card-columns" id="galeria">
+            <!-- <div class="card">
+                <a href="" data-toggle="modal" data-target="#exampleModal">
+                    <img src="img/1.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                 
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                     
+                        <img src="img/1.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+            
+                  </div>
+            </div> -->
+<!-- código JavaScript -->
+          <script>
+            /*creamos una variabla para almacenar una colección de imagenes lo que se conoce como arreglo como todos los archivos tienen el mismo formato no se los coloco de lo contrario tendria que colocarlo, si se tratara de texto tendría que encerrar la palabra entre comillas ejemplo "casa" */
+            var imagenes = [1,2,3,4,5,6,7,8,9,10,11];
+
+            /*Creamos una variable y le asignamos el id del identidificador que le colocamos a la clase 
+            card-columns a través del DOM document.getElementById('galeria')*/
+            var galeria = document.getElementById('galeria');
+
+            /*vamos a realizar un ciclo for para que repita una acción tantas veces se le indique, card va a contener todo lo que tiene la variable imagenes (arreglo) */
+            for(card of imagenes){
+
+            /*Vamos a insertar un condigo en HTML con la propiedad innerHTML del DOM, recuerda que galeria es el idetificador del div con la clase galeria que contiene todo el codigo de la card*/
+            /*importante las comillas invertidas nos permiten hacer una plantilla para agregar código HTML con el signo + antes del = estamos concatenando el código*/
+            galeria.innerHTML += `
+            <div class="card">
+                <a href="" data-toggle="modal" data-target="#id${card}">
+                    <img src="img/${card}.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="id${card}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+     
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+         
+                        <img src="img/${card}.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+
+                  </div>
+            </div>
+            `
+            }
+
+          </script>
+
+
+        </div>
+      </div>
+    </section>
+    <!-- Fin Tour1 -->
+
+    <!-- Tour2 -->
+    <section class="py-5">
+      <div class="container">
+          <h1 class="text-center display-4">Tour 2: Madrid - Granada - Sevilla - Barcelona </h1>
+        <!-- Colocamos un identificador para las tarjetas (card) llado galeria -->
+        <div class="card-columns" id="galeria2">
+            <!-- <div class="card">
+                <a href="" data-toggle="modal" data-target="#exampleModal">
+                    <img src="img/1.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                 
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                     
+                        <img src="img/1.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+            
+                  </div>
+            </div> -->
+<!-- código JavaScript -->
+          <script>
+            /*creamos una variabla para almacenar una colección de imagenes lo que se conoce como arreglo como todos los archivos tienen el mismo formato no se los coloco de lo contrario tendria que colocarlo, si se tratara de texto tendría que encerrar la palabra entre comillas ejemplo "casa" */
+            var imagenes2 = [12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28];
+
+            /*Creamos una variable y le asignamos el id del identidificador que le colocamos a la clase 
+            card-columns a través del DOM document.getElementById('galeria')*/
+            var galeria2 = document.getElementById('galeria2');
+
+            /*vamos a realizar un ciclo for para que repita una acción tantas veces se le indique, card va a contener todo lo que tiene la variable imagenes (arreglo) */
+            for(card2 of imagenes2){
+
+            /*Vamos a insertar un condigo en HTML con la propiedad innerHTML del DOM, recuerda que galeria es el idetificador del div con la clase galeria que contiene todo el codigo de la card*/
+            /*importante las comillas invertidas nos permiten hacer una plantilla para agregar código HTML con el signo + antes del = estamos concatenando el código*/
+            galeria2.innerHTML += `
+            <div class="card2">
+                <a href="" data-toggle="modal" data-target="#id${card2}">
+                    <img src="img/${card2}.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="id${card2}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+     
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+         
+                        <img src="img/${card2}.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+
+                  </div>
+            </div>
+            `
+            }
+
+          </script>
+
+
+        </div>
+      </div>
+    </section>       
+    <!-- Fin Tour2 -->            
+
+    <!-- Tour3-->
+    <section class="py-5">
+      <div class="container">
+          <h1 class="text-center display-4">Tour 3: Chicago - New York - Boston</h1>
+        <!-- Colocamos un identificador para las tarjetas (card) llado galeria -->
+        <div class="card-columns" id="galeria3">
+            <!-- <div class="card">
+                <a href="" data-toggle="modal" data-target="#exampleModal">
+                    <img src="img/1.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                 
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                     
+                        <img src="img/1.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+            
+                  </div>
+            </div> -->
+<!-- código JavaScript -->
+          <script>
+            /*creamos una variabla para almacenar una colección de imagenes lo que se conoce como arreglo como todos los archivos tienen el mismo formato no se los coloco de lo contrario tendria que colocarlo, si se tratara de texto tendría que encerrar la palabra entre comillas ejemplo "casa" */
+            var imagenes3= [29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46, 47,48,49,50,51,52,53,54];
+
+            /*Creamos una variable y le asignamos el id del identidificador que le colocamos a la clase 
+            card-columns a través del DOM document.getElementById('galeria')*/
+            var galeria3 = document.getElementById('galeria3');
+
+            /*vamos a realizar un ciclo for para que repita una acción tantas veces se le indique, card va a contener todo lo que tiene la variable imagenes (arreglo) */
+            for(card3 of imagenes3){
+
+            /*Vamos a insertar un condigo en HTML con la propiedad innerHTML del DOM, recuerda que galeria es el idetificador del div con la clase galeria que contiene todo el codigo de la card*/
+            /*importante las comillas invertidas nos permiten hacer una plantilla para agregar código HTML con el signo + antes del = estamos concatenando el código*/
+            galeria3.innerHTML += `
+            <div class="card3">
+                <a href="" data-toggle="modal" data-target="#id${card3}">
+                    <img src="img/${card3}.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="id${card3}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+     
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+         
+                        <img src="img/${card3}.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+
+                  </div>
+            </div>
+            `
+            }
+
+          </script>
+
+
+        </div>
+      </div>
+    </section>       
+    <!-- Fin Tour3 -->            
+
+    <!-- Tour4-->
+    <section class="py-5">
+      <div class="container">
+          <h1 class="text-center display-4">Tour 4: Amsterdam - Berlin - Praga</h1>
+        <!-- Colocamos un identificador para las tarjetas (card) llado galeria -->
+        <div class="card-columns" id="galeria4">
+            <!-- <div class="card">
+                <a href="" data-toggle="modal" data-target="#exampleModal">
+                    <img src="img/1.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                 
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                     
+                        <img src="img/1.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+            
+                  </div>
+            </div> -->
+<!-- código JavaScript -->
+          <script>
+            /*creamos una variabla para almacenar una colección de imagenes lo que se conoce como arreglo como todos los archivos tienen el mismo formato no se los coloco de lo contrario tendria que colocarlo, si se tratara de texto tendría que encerrar la palabra entre comillas ejemplo "casa" */
+            var imagenes4= [55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72, 73,74,75,76,77,78,79];
+
+            /*Creamos una variable y le asignamos el id del identidificador que le colocamos a la clase 
+            card-columns a través del DOM document.getElementById('galeria')*/
+            var galeria4 = document.getElementById('galeria4');
+
+            /*vamos a realizar un ciclo for para que repita una acción tantas veces se le indique, card va a contener todo lo que tiene la variable imagenes (arreglo) */
+            for(card4 of imagenes4){
+
+            /*Vamos a insertar un condigo en HTML con la propiedad innerHTML del DOM, recuerda que galeria es el idetificador del div con la clase galeria que contiene todo el codigo de la card*/
+            /*importante las comillas invertidas nos permiten hacer una plantilla para agregar código HTML con el signo + antes del = estamos concatenando el código*/
+            galeria4.innerHTML += `
+            <div class="card4">
+                <a href="" data-toggle="modal" data-target="#id${card4}">
+                    <img src="img/${card4}.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="id${card4}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+     
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+         
+                        <img src="img/${card4}.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+
+                  </div>
+            </div>
+            `
+            }
+
+          </script>
+
+
+        </div>
+      </div>
+    </section>       
+    <!-- Fin Tour4 -->  
+    <!-- Fin del contenido de la pagina -->
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Creado por Orlando Moreno Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+  
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/full-slider.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+
+
+    <section class="py-5">
+      <div class="container">
+          <h1 class="text-center display-4">Galería de imágenes con Bootstrap y JavaScrip</h1>
+        <div class="card-columns" id="galeria">
+            <!-- <div class="card">
+                <a href="" data-toggle="modal" data-target="#exampleModal">
+                    <img src="img/1.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                 
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                     
+                        <img src="img/1.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+            
+                  </div>
+            </div> -->
+<!-- código JavaScript -->
+          <script>
+            /*creamos una variabla para almacenar una colección de imagenes lo que se conoce como arreglo como todos los archivos tienen el mismo formato no se los coloco de lo contrario tendria que colocorlo, si se tratara de taxto tendría que encerrar la palabra entre comillas ejemplo "casa" */
+            var imagenes = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16];
+
+            /*Creamos una variable y le asignamos el id del identidificador que le colocamos a la clase 
+            card-columns a través del DOM document.getElementById('galeria')*/
+            var galeria = document.getElementById('galeria');
+
+            /*vamos a realizar un ciclo for para que repita una acción tantas veces se le indique, imagen va a contener todo lo que tiene la variable imagenes (arreglo) */
+            for(card of imagenes){
+
+            /*Vamos a insertar un condigo en HTML con la propiedad innerHTML del DOM, recuerda que galeria es el idetificador del div con la clase galeria que contiene todo el codigo de la card*/
+            /*importante la comillas invertidas nos permiten hacer una plantilla para agregar código HTML con el signo + antes del = estamos concatenando el código*/
+            galeria.innerHTML += `
+            <div class="card">
+                <a href="" data-toggle="modal" data-target="#id${card}">
+                    <img src="img/${card}.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="id${card}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+     
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+         
+                        <img src="img/${card}.jpg" alt="rio con puente" class="img-fluid rounded foto" />
+                    </div>
+
+                  </div>
+            </div>
+            `
+            }
+
+          </script>
+
+
+        </div>
+      </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

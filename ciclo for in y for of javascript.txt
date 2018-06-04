@@ -1,0 +1,61 @@
+sentencia for...in
+La sentencia for...in itera una variable especificada sobre todas las propiedades 
+enumerables de un objeto. Para cada propiedad distinta, JavaScript ejecuta las 
+sentencias especificadas. Una sentencia for...in será como sigue:
+
+for (variable en objeto) {
+  sentencias
+}
+
+
+Ejemplo
+La siguiente función toma como su argumento un objeto y el nombre del objeto. 
+Entonces itera sobre todas las propiedades del objeto y devuelve una cadena que lista 
+los nombres de las propiedades y sus nombres.
+
+function volcar_propiedades(obj, obj_nombre) {
+  var resultado = "";
+  for (var i in obj) {
+    resultado += obj_nombre + "." + i + " = " + obj[i] + "<br>";
+  }
+  resultado += "<hr>";
+  return resultado;
+}
+Para un objeto coche con propiedades marca y modelo, resultado sería:
+
+coche.marca = Ford
+coche.modelo = Mustang
+Arrays
+Aunque puede ser tentador usar esto como una forma de iterar sobre elementos Array, 
+la sentencia for...in devolverá el nombre de las propiedades que usted ha definido además 
+de los índices numéricos. En consecuencia es mejor usar un bucle for tradicional con un índice 
+numérico cuando esté iterando sobre arrays, ya que la sentencia for...in itera sobre las 
+propiedades definidas por el usuario además de los elementos del array, si usted modifica el 
+objeto Array, por ejemplo añadiendo propiedades personalizadas o métodos.
+
+
+
+
+
+
+sentencia for...of
+La sentencia for...of crea un bucle iterando sobre objetos iterables (incluyendo Array, Map, 
+Set, argumentos objetos etc), invocando una iteración personalizada conectando con sentencias 
+para ser ejecutadas por el valor de cada propiedad distinta.
+
+for (variable de objeto) {
+  sentencia
+}
+El siguiente ejemplo muestra la diferencia entre un bucle for...of y un bucle for...in. 
+Mientras for...in itera sobre nombres de propiedades, for...of itera sobre valores de propiedades:
+
+let arr = [3, 5, 7];
+arr.foo = "hello";
+
+for (let i in arr) {
+   console.log(i); // logs "0", "1", "2", "foo"
+}
+
+for (let i of arr) {
+   console.log(i); // logs "3", "5", "7"
+}
