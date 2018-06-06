@@ -44,10 +44,10 @@ en el tiempo en lugar de unHTML elemento.*/
 /*<p>Cambie gradualmente la propiedad border-top-left-radius de 0 a 150 px, luego vuelva a 0:<p>*/
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes mymove {
-    50% {border-top-left-radius: 150px;}
+    50% {opacity: 0;}
 }
 
 @keyframes mymove {
-    50% {border-top-left-radius: 150px;}
+    50% {opacity: 0;}
 }
 
